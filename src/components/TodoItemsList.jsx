@@ -1,5 +1,5 @@
 import React from 'react'
-import { TodoItem } from './TodoItem'
+import  TodoItem  from './TodoItem'
 import { connect } from 'react-redux'
 
 const TodoItemsList = ({todos}) => {
@@ -8,7 +8,7 @@ const TodoItemsList = ({todos}) => {
     }
     return (
         <div>
-            {todos.map(todo => <TodoItem title={todo.title} key={todo.id}/>).reverse()}
+            {todos.map(todo => <TodoItem title={todo.title} id={todo.id} key={todo.id}/>).reverse()}
         </div>
     )
 }
