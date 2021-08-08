@@ -6,7 +6,7 @@ import SearchTodo from "./SearchTodo";
 const TodoItemsList = ({ todos, search }) => {
   const filteredTodos = useMemo(
     () =>
-      search ? todos.filter((el) => el.title.includes(search)) : [...todos],
+      search ? todos.filter((el) => el.title.toLowerCase().includes(search.toLowerCase())) : [...todos],
     [todos, search]
   );
 
