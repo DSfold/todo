@@ -1,15 +1,24 @@
 import './App.css';
 import NewTodo from './components/NewTodo';
-import SearchTodo from './components/SearchTodo';
 import  TodoItemsList  from './components/TodoItemsList';
+import { Layout } from 'antd';
+
+const { Header, Content, Footer } = Layout;
 
 function App() {
   return (
     <div className="App">
-        <SearchTodo/>
-        <h1>Todo List</h1>
+      <Layout>
+      <Header>
+        <h1 style={{color:'white'}}>Todo List</h1>
+      </Header>
+      <Content>
         <NewTodo/>
+      </Content>
+      <Footer>
         <TodoItemsList/>
+      </Footer>
+    </Layout>  
     </div>
   );
 }

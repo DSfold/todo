@@ -1,12 +1,14 @@
 import { combineReducers, createStore, compose, applyMiddleware } from "redux";
-import { todoReducer } from "./todoReducer";
-import { alertReducer } from "./alertReducer";
+import todos from "./todo/reducer";
+import alert from "./alert/reducer";
+import search from "./search/reducer"
 import  thunk  from 'redux-thunk'
 
 const rootReducer = combineReducers({
-    todos: todoReducer,
-    alert: alertReducer
-})
+    todos,
+    alert,
+    search,
+});
 
 const store = createStore(rootReducer, compose(
     applyMiddleware(
