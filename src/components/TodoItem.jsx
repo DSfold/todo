@@ -65,7 +65,7 @@ const TodoItem = ({ id, title, editTodo, deleteTodo }) => {
                 onChange={handleChange}
                 onBlur={deactivateEditMode}
                 style={{
-                  width: "25em",
+                  width: "250%",
                   fontWeight: "bold",
                   fontSize: "140%",
                 }}
