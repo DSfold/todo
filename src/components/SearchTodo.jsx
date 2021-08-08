@@ -18,15 +18,20 @@ const SearchTodo = ({ editSearch }) => {
     <div>
       <Search
         placeholder="Search..."
-        onChange ={handleChangeSearch}
-        style={{ width: '15%', marginTop: "10px", marginRight: "30%", marginBottom: "10px",}}
+        onChange={handleChangeSearch}
+        style={{
+          width: "15%",
+          marginTop: "10px",
+          marginRight: "30%",
+          marginBottom: "10px",
+        }}
       />
     </div>
   );
 };
 
 const mapDispatchToProps = {
-    editSearch: edit,
-}
+  editSearch: edit,
+};
 
 export default connect(null, mapDispatchToProps)(SearchTodo);

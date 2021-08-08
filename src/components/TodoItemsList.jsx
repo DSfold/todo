@@ -6,9 +6,7 @@ import SearchTodo from "./SearchTodo";
 const TodoItemsList = ({ todos, search }) => {
   const filteredTodos = useMemo(
     () =>
-      search
-        ? todos.filter((el) => el.title.includes(search))
-        : [...todos],
+      search ? todos.filter((el) => el.title.includes(search)) : [...todos],
     [todos, search]
   );
 
@@ -17,7 +15,7 @@ const TodoItemsList = ({ todos, search }) => {
   }
   return (
     <div>
-      <SearchTodo/>
+      <SearchTodo />
       {filteredTodos
         .map((todo) => (
           <TodoItem title={todo.title} id={todo.id} key={todo.id} />

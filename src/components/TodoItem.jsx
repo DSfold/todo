@@ -45,7 +45,18 @@ const TodoItem = ({ id, title, editTodo, deleteTodo }) => {
                 onDoubleClick={activateEditMode}
                 style={{ fontWeight: "bold", fontSize: "140%" }}
               >
-                {actualTitle}
+                <div>{actualTitle}</div>
+                <div
+                  style={{
+                    fontWeight: "lighter",
+                    color: "#c9c9c9",
+                    fontSize: "60%",
+                    fontStyle: "oblique",
+                    marginTop: "2px",
+                  }}
+                >
+                  double click to edit
+                </div>
               </span>
             )}
             {editMode && (
@@ -61,6 +72,7 @@ const TodoItem = ({ id, title, editTodo, deleteTodo }) => {
                 value={actualTitle}
               />
             )}
+            {/* <div style></div> */}
           </Col>
           <Col span={18} push={6}>
             <Button type="primary" danger onClick={handleDelete}>

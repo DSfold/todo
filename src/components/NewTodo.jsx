@@ -7,7 +7,7 @@ import { showAlert } from "../store/alert/actions";
 import { addTodo } from "../store/todo/actions";
 import { Alert } from "antd";
 
-const NewTodo = ({showAlert, alert, addTodo}) => {
+const NewTodo = ({ showAlert, alert, addTodo }) => {
   const [title, setTitle] = useState("");
   const titleHandler = (e) => {
     setTitle(e.target.value);
